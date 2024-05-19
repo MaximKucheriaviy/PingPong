@@ -19,7 +19,6 @@ void playersNameSelector() {
 	nameSelector.addObject(&per);
 	per.setCallback(&callback);
 
-	nameSelector.enable();
 	app.addScreen(&nameSelector);
 	app.run();
 }
