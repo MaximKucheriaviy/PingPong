@@ -5,7 +5,6 @@
 
 
 
-
 int main() {
 	arial.loadFromFile("./fonts/arial.ttf");
 	//mainMenurun();
