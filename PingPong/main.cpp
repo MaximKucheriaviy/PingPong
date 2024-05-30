@@ -7,7 +7,8 @@
 
 int main() {
 	arial.loadFromFile("./fonts/arial.ttf");
-	mainMenurun();
+	balltexture.loadFromFile("./images/ballt.png");
+	//mainMenurun();
 	playersNameSelector();
 	app.run();
 }

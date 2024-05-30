@@ -4,6 +4,7 @@ Screen nameSelector;
 Screen game;
 
 sf::Font arial;
+sf::Texture balltexture;
 
 enum Mode {
 	singlePlayer,
