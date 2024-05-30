@@ -130,6 +130,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GameRun.hpp" />
     <ClInclude Include="GlobalDeclaration.hpp" />
     <ClInclude Include="MainMenu.hpp" />
     <ClInclude Include="PlayersNameSelector.hpp" />

@@ -19,6 +19,7 @@ void callback() {
 		}
 		else {
 			cout << Player1.getLine() << endl << Player2.getLine() << endl;
+			Gamest();
 		}
 	}
 	else {
@@ -27,6 +28,7 @@ void callback() {
 		}
 		else {
 			cout << Player1.getLine() << endl;
+			Gamest();
 		}
 	}
 	//return Player1.getLine(), Player2.getLine();
@@ -49,7 +51,7 @@ void playersNameSelector() {
 	}
 	nameSelector.addObject(&per);
 	per.setCallback(&callback);
-
+	nameSelector.enable();
 	app.addScreen(&nameSelector);
 
 }
