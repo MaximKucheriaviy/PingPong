@@ -51,5 +51,5 @@ void playersNameSelector() {
 	per.setCallback(&callback);
 
 	app.addScreen(&nameSelector);
-	nameSelector.enable();
+
 }
