@@ -29,5 +29,8 @@
     <ClInclude Include="PlayersNameSelector.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="GameRun.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
