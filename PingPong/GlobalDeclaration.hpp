@@ -11,6 +11,6 @@ enum Mode {
 	multiplayer
 };
 
-//Mode mode = Mode::singlePlayer;
-Mode mode = Mode::multiplayer;
+Mode mode = Mode::singlePlayer;
+//Mode mode = Mode::multiplayer;
 
