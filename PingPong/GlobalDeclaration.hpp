@@ -1,6 +1,7 @@
 Application app;
 Screen mainMenu;
 Screen nameSelector;
+Screen game;
 
 sf::Font arial;
 
