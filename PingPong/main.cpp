@@ -7,7 +7,7 @@
 
 int main() {
 	arial.loadFromFile("./fonts/arial.ttf");
-	//mainMenurun();
+	mainMenurun();
 	playersNameSelector();
 	app.run();
 }
