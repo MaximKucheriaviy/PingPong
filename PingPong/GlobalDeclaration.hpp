@@ -5,6 +5,9 @@ Screen game;
 
 sf::Font arial;
 sf::Texture balltexture;
+sf::Clock ballclock;
+bool games = false;
+
 
 enum Mode {
 	singlePlayer,
