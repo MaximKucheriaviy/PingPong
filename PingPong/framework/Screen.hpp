@@ -22,6 +22,15 @@ public:
 		for (int i = 0; i < proceses.size(); i++) {
 			proceses[i]->run();
 		}
+		for (int i = 0; i < timeouts.size(); i++) {
+			timeouts[i].run();
+		}
+		for (int i = 0; i < timeouts.size(); i++) {
+			if (timeouts[i].isRan()) {
+				timeouts.erase(timeouts.begin() + i);
+				i--;
+			}
+		}
 		for (int i = 0; i < objects.size(); i++) {
 			objects[i]->display();
 		}
@@ -36,10 +45,16 @@ public:
 		}
 	}
 	void enable() {
+		for (int i = 0; i < objects.size(); i++) {
+			objects[i]->resetClocks();
+		}
 		active = true;
 	}
 	void disable() {
 		active = false;
+	}
+	void setTimout(Timeout t) {
+		timeouts.push_back(t);
 	}
 	void eventListener(sf::Event* event) {
 		if (!active) {
@@ -59,9 +74,13 @@ public:
 	vector<Box*> getObjects() {
 		return objects;
 	}
+	void deleteObjects() {
+		objects.clear();
+	}
 protected:
 	vector<Box*> objects;
 	vector<Process*> proceses;
+	vector<Timeout> timeouts;
 	sf::RenderWindow* window = NULL;
 	bool active = false;
 };

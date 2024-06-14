@@ -1,6 +1,25 @@
-Button singlePlayerButton("Single Play", new sf::Font(), 10, 200, 100, 100, 30);
-Button multiPlayerButton("Co-op", new sf::Font(), 10, 200, 100, 100, 50, sf::Color::Blue);
+Button singlePlayerButton("Single Play", &arial, 20, 200, 100, 100, 50, sf::Color::Magenta);
+Button multiPlayerButton("Co-op", &arial, 20, 200, 100, 500, 50, sf::Color::Blue);
+
+void onSinglePlayerButtonPresss() {
+	nameSelector.deleteObjects();
+	mainMenu.disable();
+	mode = singlePlayer;
+	nameSelector.enable();
+	initSelectScreen();
+}
+
+void onMultyPlayerButtonPresss() {
+	nameSelector.deleteObjects();
+	mainMenu.disable();
+	mode = multiplayer;
+	nameSelector.enable();
+	initSelectScreen();
+}
+
 void mainMenurun() {
+	singlePlayerButton.setCallback(onSinglePlayerButtonPresss);
+	multiPlayerButton.setCallback(onMultyPlayerButtonPresss);
 	mainMenu.addObject(&singlePlayerButton);
 	mainMenu.addObject(&multiPlayerButton);
 	app.addScreen(&mainMenu);

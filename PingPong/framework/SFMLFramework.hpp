@@ -3,6 +3,7 @@
 #include <vector>
 using namespace std;
 
+#include "Timeout.hpp"
 #include "Box.hpp"
 #include "EventListener.hpp"
 #include "MovableBox.hpp"

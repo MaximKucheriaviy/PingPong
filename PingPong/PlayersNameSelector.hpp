@@ -1,8 +1,7 @@
 #include <iostream>
 
-TextInput Player1("", &arial, 16, 200, 50, 10, 70, sf::Color::White, sf::Color::Black);
+
 TextBox pl1("Player 1 name", &arial, 20, 200, 50, 10, 10, sf::Color::Red, sf::Color::Black);
-TextInput Player2("", &arial, 16, 200, 50, 590, 70, sf::Color::White, sf::Color::Black);
 TextBox pl2("Player 2 name", &arial, 20, 200, 50, 590, 10, sf::Color::Red, sf::Color::Black);
 Button per("Submit", &arial, 20, 100, 50, 350, 10, sf::Color::Green, sf::Color::Black);
 
@@ -34,7 +33,8 @@ void callback() {
 	//return Player1.getLine(), Player2.getLine();
 
 }
-void playersNameSelector() {
+
+void initSelectScreen() {
 	if (mode != singlePlayer) {
 		nameSelector.addObject(&Player1);
 		nameSelector.addObject(&pl1);
@@ -42,16 +42,18 @@ void playersNameSelector() {
 		nameSelector.addObject(&pl2);
 	}
 	else {
-		pl1.setPosition(300,10);
+		pl1.setPosition(300, 10);
 		pl1.setText("Player name");
-		Player1.setPosition(300,80);
+		Player1.setPosition(300, 80);
 		per.setPosition(350, 150);
 		nameSelector.addObject(&Player1);
 		nameSelector.addObject(&pl1);
 	}
 	nameSelector.addObject(&per);
+}
+void playersNameSelector() {
+	
 	per.setCallback(&callback);
-	nameSelector.enable();
 	app.addScreen(&nameSelector);
 
 }

@@ -32,5 +32,11 @@
     <ClInclude Include="GameRun.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="framework\Timeout.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultScreen.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

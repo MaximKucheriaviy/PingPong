@@ -64,9 +64,9 @@ public:
 		this->airFiction = ad;
 	}
 
-	void collide(PhysicalBody* target) {
+	bool collide(PhysicalBody* target) {
 		if (!shape.getGlobalBounds().intersects(target->getBounds())) {
-			return;
+			return false;
 		}
 		sf::Vector2f startPosition = shape.getPosition();
 		int up = 0;
@@ -128,6 +128,7 @@ public:
 			xSpeed *= -1;
 			xSpeed *= target->density;
 		}
+		return true;
 	}
 	void jump(float jumpForce) {
 		if (!canJump) {
@@ -135,6 +136,10 @@ public:
 		}
 		ySpeed = jumpForce * -1;
 		canJump = false;
+	}
+	virtual void resetClocks() {
+		moveClock.restart();
+		gravityTimer.restart();
 	}
 protected:
 	sf::Clock gravityTimer;

@@ -6,6 +6,9 @@ public:
 	MovableBox(int width, int height, int x, int y, sf::Color color = sf::Color::White) : Box(width, height, x, y ,color) {
 		
 	}
+	virtual void resetClocks() {
+		moveClock.restart();
+	}
 	void move(float x, float y) {
 		if (moveClock.getElapsedTime().asMilliseconds() < 7) {
 			return;

@@ -19,7 +19,9 @@ public:
 	virtual void process() {
 
 	}
-
+	virtual void resetClocks() {
+		
+	}
 	void setPosition(float x, float y) {
 		shape.setPosition(x, y);
 	}
